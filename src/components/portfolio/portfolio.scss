@@ -1,0 +1,88 @@
+@import "../../styles/vars";
+
+.portfolio{
+    margin-bottom: 79px;
+    &__top{
+        margin-bottom: 42px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    &__title{
+        font-size: 48px;
+        line-height: 62px;
+    }
+    &__all{
+        text-decoration: none;
+        position: relative;
+        padding-right: 32px;
+        text-transform: uppercase;
+        font-size: 18px;
+        line-height: 27px;
+        color: $accent;
+        &::after{
+            top:50%;
+            transform: translateY(-50%);
+            content: '';
+            width: 16px;
+            height: 16px;
+            position: absolute;
+            right: 0;
+            background-image: url("../../assets/icons/arrow-right.svg");
+        }
+    }
+    &__list{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-gap: 58px 25px;
+        margin-bottom: 74px;
+    }
+    &__cases-btn{
+        text-transform: uppercase;
+        font-size: 18px;
+        line-height: 30px;
+        padding: 21px 70px;
+        @extend %button;
+        border: 1px $accent solid;
+        border-radius: 56px;
+        background-color: transparent;
+        color: $accent;
+        &:hover{
+            color:#fff;
+        }
+    }
+}
+
+.portfolio-item{
+    &__img-box{
+        display: flex;
+        align-items: end;
+        border-radius: 8px;
+        width: 100%;
+        height: 513px;
+    }
+    &__type{
+        display: block;
+        margin-bottom: 16px;
+        margin-left: 16px;
+        color:#fff;
+        text-transform: uppercase;
+        font-size: 14px;
+        line-height: 20px;
+        padding: 2px 8px;
+        background-color: #212529;
+        border-radius: 32px;
+    }
+    &__title{
+        text-align: left;
+        font-weight: 500;
+        font-size: 24px;
+        line-height: 33px;
+    }
+    &__subtext{
+        color: #6C757D;
+        font-size: 18px;
+        line-height: 27px;
+        text-align-last: left;
+    }
+}

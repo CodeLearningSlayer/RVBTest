@@ -1,0 +1,33 @@
+@import "../../styles/vars";
+
+.header{
+    margin-bottom: 17px;
+    padding: 24px 0;
+    &__inner{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    &__nav{
+        display: flex;
+        align-items: center;
+    }
+    &__nav-link{
+        transition: all .3s;
+        text-decoration: none;
+        color: #000;
+        font-size: 16px;
+        line-height: 24px;
+        &:hover{
+            color: $accent;
+        }
+    }
+    &__nav-link+.header__nav-link{
+        margin-left: 15px;
+    }
+    &__nav-btn{
+        margin-left: 15px;
+        padding: 10px 20px;
+        @extend %button
+    }
+}

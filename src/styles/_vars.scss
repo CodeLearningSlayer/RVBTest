@@ -1,0 +1,13 @@
+$accent: #D22020;
+
+%button{
+    background-color: $accent;
+    border-radius: 50px;
+    border:none;
+    color:#fff;
+    cursor: pointer;
+    transition: all .3s;
+    &:hover{
+        background-color:rgb(184, 28, 28);
+    }
+}

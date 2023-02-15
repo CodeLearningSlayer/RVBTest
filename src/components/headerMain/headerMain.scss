@@ -1,0 +1,72 @@
+.start{
+    min-height: 100vh;
+    background-size: contain;
+    background-position: center;
+    perspective: 1px;
+    transform-style:preserve-3d;
+    width: 100vw;
+    margin-bottom: 57px;
+    &::before{
+        content: '';
+        display: block;
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        top: 0;
+        z-index: -1;
+        transform-origin: center;
+        min-height: 100vh;
+        background-image: url("../../assets/bg.jpg");
+        background-repeat: no-repeat;
+        background-size: cover;
+
+        transform: translateZ(-1px) scale(2);
+    }
+}
+
+.header{
+    &__slogan{
+        text-align-last: left;
+        max-width: 210px;
+        margin-top: 30px;
+    }
+    &__social{
+        position: absolute;
+        bottom: 32px;
+        right: 32px;
+    }
+    &__social-item{
+        text-transform: uppercase;
+        position: relative;
+        display: inline-block;
+        margin-left: 32px;
+        text-decoration: none;
+        color:#343A40;
+        padding-left: 32px;
+        &::before{
+            content:'';
+            width: 24px;
+            height: 24px;
+            position: absolute;
+            left: 0;
+        }
+    }
+    &__social-item--whatsapp::before{
+        background-image: url("../../assets/icons/whatsapp.svg");
+    }
+    &__social-item--telegram::before{
+        background-image: url("../../assets/icons/tg.svg");
+    }
+}
+
+.arrow-down{
+    position: absolute;
+    bottom: 32px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: block;
+    width: 21px;
+    height: 21px;
+    background-image: url("../../assets/arrow-down.svg");
+}
