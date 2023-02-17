@@ -1,7 +1,9 @@
 import React from 'react';
 import "./portfolio.scss"
+import { CSSTransition, TransitionGroup } from 'react-transition-group';
 
 const Portfolio = () => {
+    const duration = 150;
     const items = [
         {
             id: 1,
@@ -73,13 +75,22 @@ const Portfolio = () => {
                     {items.map((item, index) => {
                         if (index < 6)
                             return (
-                                <div key={item.id} className='portfolio__list-item portfolio-item'>
-                                    <div className='portfolio-item__img-box' style={{background : `${item.style}`}}>
-                                        <span className='portfolio-item__type'>{item.type}</span>    
-                                    </div>   
-                                    <p className='portfolio-item__title'>{item.text}</p>
-                                    <p className='portfolio-item__subtext'>{item.subtext}</p>
-                                </div>
+                                <CSSTransition 
+                                    key={item.id}
+                                    in={index >= 0}
+                                    classNames='card'
+                                    timeout={duration * (index % 6)}>
+                                    <div className='portfolio__list-item portfolio-item'>
+                                        <a href='link' className='portfolio-item__link'>
+                                            <div className='portfolio-item__img-box' style={{background : `${item.style}`}}>
+                                                <a href='tag' className='portfolio-item__type'>{item.type}</a>    
+                                            </div>  
+                                        </a>
+                                        <a href="link" className='portfolio-item__title'>{item.text}</a>
+                                        <p className='portfolio-item__subtext'>{item.subtext}</p>
+                                    </div>
+                                </CSSTransition>
+                                
                             )
                     })}
                 </div>

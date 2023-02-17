@@ -2,34 +2,13 @@
     min-height: 100vh;
     background-size: contain;
     background-position: center;
-    perspective: 1px;
-    transform-style:preserve-3d;
-    width: 100vw;
-    margin-bottom: 57px;
-    &::before{
-        content: '';
-        display: block;
-        position: absolute;
-        left: 0;
-        right: 0;
-        bottom: 0;
-        top: 0;
-        z-index: -1;
-        transform-origin: center;
-        min-height: 100vh;
-        background-image: url("../../assets/bg.jpg");
-        background-repeat: no-repeat;
-        background-size: cover;
-
-        transform: translateZ(-1px) scale(2);
-    }
 }
 
 .header{
     &__slogan{
         text-align-last: left;
         max-width: 210px;
-        margin-top: 30px;
+        margin-top: 41px;
     }
     &__social{
         position: absolute;
@@ -61,6 +40,7 @@
 }
 
 .arrow-down{
+    cursor: pointer;
     position: absolute;
     bottom: 32px;
     left: 50%;
@@ -70,3 +50,5 @@
     height: 21px;
     background-image: url("../../assets/arrow-down.svg");
 }
+
+@import "../../styles/media";

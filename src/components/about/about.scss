@@ -1,0 +1,101 @@
+@import "../../styles/vars";
+$black: #212529;
+.about{
+    margin-top: 30px;
+    margin-bottom: 34px;
+    &__title{
+        font-weight: 600;
+        line-height: 62px;
+        font-size: 48px;
+        color: $black;
+        text-align: left;
+        margin-bottom: 58px;
+
+    }
+    &__staff-list{
+        display: flex;
+    }
+    &__inner{
+        display: flex;
+    }
+    &__inner-btn{
+        @extend %button-transparent;
+        padding: 22px 66px;
+        display: inline-block;
+    }
+    &__inner-text{
+        text-align: left;
+        color:#495057;
+        font-size: 18px;
+        line-height: 27px;
+        margin-bottom: 64px;
+    }
+    &__img{
+        border-radius: 8px;
+        margin-bottom: 8px;
+        cursor: pointer;
+    }
+}
+
+.left{
+    max-width: 676px;
+    width: 100%;
+    margin-right: 20px;
+    text-align: left;
+}
+
+.staff-list{
+    &__item{
+        font-size: 32px;
+        line-height: 38px;
+        color:$black;
+        span{
+            font-size: 32px;
+            margin-right: 12px;
+            color:$accent;
+        }
+        &+.staff-list__item{
+            margin-left: 32px;
+        }
+    }
+}
+
+ul.staff-list{
+    margin-bottom: 58px;
+}
+
+.right{
+    max-width: 678px;
+}
+
+.right-subtext{
+    color: #8D959D;
+}
+
+.achievements{
+    display: flex;
+    &__item-num{
+        display: block;
+        color:$accent;
+        margin-bottom: 12px;
+        font-size: 40px;
+        line-height: 48px;
+        font-weight: 600;
+    }
+    &__item{
+        max-width: 138px;
+        text-align: left;
+        color: $black;
+        font-size: 18px;
+        line-height: 27px;
+    }
+    &__item+.achievements__item{
+        margin-left: 32px;
+    }
+}
+
+ul.achievements{
+    margin-bottom: 37px;
+}
+
+@import "../../styles/media.scss"

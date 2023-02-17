@@ -3,6 +3,20 @@
 .header{
     margin-bottom: 17px;
     padding: 24px 0;
+    height: 50px;
+    width: 100%;
+    transition: all .4s;
+    &--sticky{
+        z-index: 15;
+        position: fixed;
+        top: 0;
+        background-color: #EEF4EDDD;
+        padding-top: 20px;
+        padding-bottom: 70px;
+    }
+    &__nav-list{
+        display: flex;
+    }
     &__inner{
         display: flex;
         justify-content: space-between;
@@ -13,6 +27,7 @@
         align-items: center;
     }
     &__nav-link{
+        cursor: pointer;
         transition: all .3s;
         text-decoration: none;
         color: #000;
@@ -22,12 +37,44 @@
             color: $accent;
         }
     }
-    &__nav-link+.header__nav-link{
-        margin-left: 15px;
-    }
     &__nav-btn{
         margin-left: 15px;
         padding: 10px 20px;
         @extend %button
+    }
+}
+
+.nav-list__item + .nav-list__item{
+    margin-left: 15px;
+}
+
+.burger-btn{
+    display: none;
+    width: 24px;
+    height: 16px;
+    position: relative;
+    background: none;
+    border:none;
+    cursor: pointer;
+    span,
+    span::before,
+    span::after{
+        left: 0;
+        width: 24px;
+        height: 2px;
+        background-color: #000;
+        position: absolute;
+    }
+    span{
+        top:50%;
+        transform: translateY(-50%);
+    }
+    span::before{
+        content:"";
+        top:-7px;
+    }
+    span::after{
+        content:"";
+        bottom: -8px;
     }
 }

@@ -2,6 +2,8 @@
 
 .portfolio{
     margin-bottom: 79px;
+    padding-top: 57px;
+    background-color: #fff;
     &__top{
         margin-bottom: 42px;
         display: flex;
@@ -11,6 +13,7 @@
     &__title{
         font-size: 48px;
         line-height: 62px;
+        font-weight: 600;
     }
     &__all{
         text-decoration: none;
@@ -58,8 +61,12 @@
         display: flex;
         align-items: end;
         border-radius: 8px;
+        transition: all .4s;
         width: 100%;
         height: 513px;
+        &:hover{
+            opacity: .8;
+        }
     }
     &__type{
         display: block;
@@ -74,6 +81,8 @@
         border-radius: 32px;
     }
     &__title{
+        color:#212529;
+        display: block;
         text-align: left;
         font-weight: 500;
         font-size: 24px;
@@ -86,3 +95,20 @@
         text-align-last: left;
     }
 }
+
+.card{
+    &-enter{
+        opacity: 0;
+    }
+    &-enter-active{
+        margin-top: -10px;
+        opacity: 0;
+    }
+    &-enter-done{
+        transition: all 300ms;
+        margin-top: 0px;
+        opacity: 1;
+    }
+}
+
+@import "../../styles/media.scss"

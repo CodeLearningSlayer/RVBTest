@@ -1,0 +1,24 @@
+.footer{
+    border-top: 1px solid #ACB5BD;
+    padding-top: 28px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 25px;
+    &__top-list{
+        display: flex;
+        justify-content: center;
+    }
+    &__top-list__item{
+        color:#ADB5BD;
+    }
+    &__top-list__item + .footer__top-list__item{
+        margin-left: 24px;
+    }
+    &__top-policy{
+        color:inherit;
+    }
+}
+ul.footer__top-list{
+    margin-bottom: 18px;
+}

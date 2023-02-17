@@ -1,0 +1,297 @@
+@media (max-width: 1330px){
+    .App .start{
+        background-image: url("../assets/bg.jpg");
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+    .staff-list__item{
+        font-size: 24px;
+        span{
+            font-size: 24px;
+        }
+    }
+    .staff-list__item + .staff-list__item {
+        margin-left: 15px;
+    }
+    .specialist{
+        margin-right: 48px;
+    }
+    .application__inner{
+        justify-content: unset;
+    }
+}
+
+@media (max-width: 1200px){
+    .form{
+        max-width: 540px;
+    }
+}
+
+@media (max-width: 992px){
+    .about{
+        &__title{
+            margin-bottom: 29px;
+        }
+    }
+    .staff-list{
+        flex-direction: column;
+        align-items: start;
+    }
+    ul.staff-list{
+        margin-bottom: 30px;
+    }
+    .staff-list__item + .staff-list__item {
+        margin-left: 0;
+    }
+    .application{
+        &__inner{
+            justify-content: center;
+            flex-direction: column;
+            align-items: center;
+        }
+        &__title{
+            text-align: center;
+        }
+    }
+    .form{
+        margin-bottom: 32px;
+        &__btn{
+            margin: 0 auto;
+        }
+    }
+    .specialist{
+        margin-right: 0;
+        margin-bottom: 32px;
+        &__avatar{
+            margin: 0 auto;
+        }
+        &__name{
+            text-align: center;
+        }
+    }
+    .briefings{
+        text-align: center;
+        padding-bottom: 50px;
+    }
+}
+
+@media (max-width: 865px){
+    .about{
+        &__inner{
+            flex-direction: column;
+        }
+        &__inner-left{
+            margin-bottom: 32px;
+        }
+    }
+}
+
+@media (max-width: 768px){
+    .header .burger-btn{
+        span{
+            transition: all .3s;
+        }
+        display: block;
+        z-index: 10;
+    }
+    .burger-btn--active{
+        span::before{
+            opacity: 1;
+            top:0px;
+            transform: rotate(90deg);
+        }
+        span::after{
+            opacity: 0;
+            z-index: 50;
+            transform: rotate(135deg);
+        }
+        span{
+            transform: rotate(45deg);
+        }
+    }
+    .header{
+        &__nav{
+            transition: all .5s;
+            transform: translateY(-250%);
+            z-index: 9;
+            align-items: start;
+            justify-content: start;
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            width: 100%;
+            flex-direction: column;
+            background-color: #fff;
+            .header__nav-btn{
+                display: none;
+            }
+        }
+        &__nav--active{
+            transform: translateY(0);
+        }
+        &__social{
+            right: 64px;
+        }
+        &__social-item{
+            padding: 0 11px;
+            &::before{
+                width: 48px;
+                height: 48px;
+                background-repeat: no-repeat;
+                background-size: cover;
+                top:-32px;
+            }
+        }
+    }
+    .header__nav .nav-list{
+        position: absolute;
+        left: 32px;
+        top:93px;
+        flex-direction: column;
+        align-items: start;
+        justify-content: center;
+        &__item{
+            padding: 10px;
+            & + .nav-list__item{
+                margin-left: 0;
+            }   
+        }
+        
+    }
+    .header-logo{
+        z-index: 10;
+    }
+}
+
+@media (max-width: 992px){
+    .portfolio-item{
+        &__img-box{
+            height: 310px;
+        }
+    }
+}
+
+@media (max-width: 768px){
+    .portfolio-item{
+        &__img-box{
+            height: 200px;
+        }
+        &__title{
+            font-size: 19px;
+            line-height: 28px;
+        }
+        &__subtext{
+            font-size: 15px;
+            line-height: 22px;
+        }
+        &__type{
+            font-size: 10px;
+            line-height: 14px;
+        }
+    }
+}
+
+@media (max-width: 576px){
+    .portfolio{
+        &__list{
+            grid-template-columns: repeat(1, 1fr);
+        }
+        &__title{
+            font-size: 31px;
+            line-height: 45px;
+        }
+        &__all{
+            font-size: 16px;
+            line-height: 24px;
+        }
+    }
+    .portfolio-item{
+        &__img-box{
+            height: 350px;
+        }
+        &__title{
+            font-size: 19px;
+            line-height: 28px;
+        }
+        &__subtext{
+            font-size: 15px;
+            line-height: 22px;
+            text-align: left;
+        }
+        &__type{
+            font-size: 10px;
+            line-height: 14px;
+        }
+    }
+}
+
+@media (max-width: 476px){
+    .portfolio{
+        margin-bottom: 69px;
+        &__list{
+            grid-template-columns: repeat(1, 1fr);
+            grid-row-gap: 32px;
+            margin-bottom: 32px;
+        }
+        &__top{
+            flex-direction: column;
+            align-items: start;
+            margin-bottom: 39px;
+        }
+        &__title{
+            font-size: 45px;
+            margin-bottom: 8px;
+        }
+        &__cases-btn{
+            padding: 21px 60px;
+        }
+    }
+    .portfolio-item{
+        display: none;
+        &__img-box{
+            height: 60vw;
+        }
+        &:first-child{
+            display: block;
+        }
+        &:nth-child(2){
+            display: block;
+        }
+    }
+    .about{
+        &__inner-text{
+            margin-bottom: 32px;
+        }
+    }
+    .achievements{
+        flex-direction: column;
+    }
+    .achievements__item + .achievements__item {
+        margin-left: 0px;
+        margin-top: 32px;
+    }
+    .briefings{
+        &__title{
+            font-size: 20px;
+        }
+    }
+    .footer{
+        &__top-list{
+            flex-direction: column;
+            margin-bottom: 32px;
+        }
+    }
+    .footer__top-list__item + .footer__top-list__item {
+        margin-left: 0px;
+        margin-top: 16px;
+    }
+}
+
+@media (max-width: 376px){
+    .about__title{
+        font-size: 40px;
+        margin-bottom: 20px;
+    }
+}
