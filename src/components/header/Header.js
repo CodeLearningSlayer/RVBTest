@@ -28,7 +28,7 @@ const Header = (props) => {
       <header className={`${fixed ? "header header--sticky" : "header"}`}>
         <div className="container">
           <div className="header__inner">
-            <a className="header-logo" href="#">
+            <a className="header-logo" href="#" onClick={() => setBurgerActive(false)}>
               <img src={logoim} alt="logo-img" className="header__logo logo" />
             </a>
             {!isNeedToChange ? (
@@ -100,7 +100,7 @@ const Header = (props) => {
       </header>
       {isNeedToChange ? 
       <Portal>
-        <Nav isBurgerActive={isBurgerActive}/>
+        <Nav setBurgerActive={setBurgerActive} isBurgerActive={isBurgerActive}/>
       </Portal>: false
       }
     </>
@@ -130,6 +130,7 @@ const Nav = (props) => {
               smooth={true}
               duration={300}
               className="header__nav-link"
+              onClick={() => props.setBurgerActive(false)}
             >
               Портфолио
             </Link>
@@ -142,6 +143,7 @@ const Nav = (props) => {
               smooth={true}
               duration={300}
               className="header__nav-link"
+              onClick={() => props.setBurgerActive(false)}
             >
               О компании
             </Link>
@@ -159,6 +161,7 @@ const Nav = (props) => {
           smooth={true}
           duration={300}
           className="header__nav-btn"
+          onClick={() => props.setBurgerActive(false)}
         >
           Оставить заявку
         </Link>
